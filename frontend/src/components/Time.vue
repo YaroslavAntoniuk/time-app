@@ -28,11 +28,11 @@ export default {
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ currentTime }}</h1>
-    <h3>Нажмите кнопку для сохранения в базе данных</h3>
-    <button @click="saveTime">Сохранить время</button>
+    <h1 class="purple-neon">{{ currentTime }}</h1>
+    <h3 class="white">Натисніть кнопку для збереження в базі даних</h3>
+    <button class="btn-wide btn-normal" @click="saveTime">Зберегти час</button>
     <h3 v-if="savedTimes.length && showSavedTimes">
-      Ранее сохраненные времена:
+      Раніше збережені часи:
     </h3>
     <div
       v-if="showSavedTimes"
@@ -42,7 +42,7 @@ export default {
     >
       <div class="deleted-item">{{ savedTime.time }}</div>
       <button class="btn-sm bg-red" @click="() => deleteTime(savedTime.id)">
-        Удалить
+        Видалити
       </button>
     </div>
   </div>
@@ -57,16 +57,6 @@ h1 {
 
 h3 {
   font-size: 2rem;
-}
-
-button {
-  font-size: 1.5rem;
-  margin: 30px;
-  background-color: rgb(128, 184, 244);
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
 }
 
 .btn-sm {

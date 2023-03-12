@@ -13,7 +13,7 @@ import Time from './components/Time.vue'
   margin: 100px auto;
 }
 
-.green {
-  color: hsla(160, 100%, 37%, 1);
+.white {
+  color: rgb(79, 80, 79);
 }
 </style>
